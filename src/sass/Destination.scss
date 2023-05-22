@@ -1,0 +1,57 @@
+@use 'styles';
+.destination-container{
+    background-image: url('../assets/destination/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;  
+    width: 100%;
+    
+    p{
+        font-family: styles.$barlow-font;
+        color: styles.$white;
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 4px;
+        padding: 4.5em;
+
+        b{
+            color: gray;
+            padding: 10px;
+            
+        }
+    }
+}
+@media screen and (max-width: styles.$tablet-size) {
+    .destination-container{
+        background-image: url('../assets/destination/background-destination-tablet.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;  
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: styles.$mobile-size){
+    .destination-container{
+        background-image: url('../assets/destination/background-destination-mobile.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;  
+        width: 100%;
+        
+        p{
+            font-family: styles.$barlow-font;
+            color: styles.$white;
+            text-transform: uppercase;
+            font-size: 17px;
+            letter-spacing: 4px;
+            padding: 4.5em;
+    
+            b{
+                color: gray;
+                padding: 10px;
+                
+            }
+        }
+    }
+}

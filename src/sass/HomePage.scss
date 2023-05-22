@@ -1,0 +1,137 @@
+@use 'styles';
+
+@mixin circle($width, $color) {
+    width: $width;
+    height: $width;
+    background: $color;
+    -webkit-border-radius: calc($width / 2);
+       -moz-border-radius: calc($width / 2);
+            border-radius: calc($width / 2);
+  }
+
+.home-site{
+    background-image: url(../assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;  
+    width: 100%;
+    height: 100vh;
+
+    .content{
+        width: 35%;
+        height: 40%;
+        align-content: flex-start;
+        margin-left: 10rem;
+        margin-top: 7rem;
+
+        #title{
+            font-family: styles.$barlow-font;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: styles.$purple;
+            font-size: 20px;
+        }
+
+        #bold{
+            font-family: styles.$bellefair-font;
+            text-transform: uppercase;
+            color: styles.$white;
+            font-size: 100px;
+        }
+
+        #info{
+            color: styles.$purple;
+        }
+    }
+        .content-right{
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-right: 10rem;
+            margin-top: -15rem;
+
+            #circle{
+                @include circle(250px, styles.$white);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                p{
+                    font-family: styles.$bellefair-font;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    font-size: 30px;
+                    width: fit-content;
+                    margin-top: 10%;
+                }
+            }
+        }
+}
+
+// tablet size
+@media (max-width: styles.$tablet-size) {
+.home-site{
+    background-image: url(../assets/home/background-home-tablet.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;  
+    width: 100%;
+    height: 100%;
+
+    .content{
+        align-items: center;
+        width: 80%;
+        padding-right: 150px;
+        // padding-left: -40px;
+        #title{
+            text-align: center;
+        }
+        #bold{
+            text-align: center;
+        }
+        #info{
+            text-align: center;
+        }
+    }
+
+    .content-right{
+        // background-color: red;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+        margin-left: 6rem;
+        padding-bottom: 5rem;
+        // padding-right: 10rem;
+        // margin-top: -15rem;
+       
+        }
+    }
+}
+
+//mobile size
+@media (max-width: styles.$mobile-size){
+    .home-site{
+        background-image: url(../assets/home/background-home-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;  
+        width: 100%;
+        height: 50%;
+        .content{
+            // align-items: center;
+            width: 80%;
+            margin-left: 8rem;
+
+            #bold{
+                text-align: center;
+                margin-left: -50px;
+            }
+        }
+    }
+
+}
+
+
+
